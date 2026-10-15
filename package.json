@@ -1,0 +1,12 @@
+{
+  "name": "portafolio-web",
+  "version": "1.0.0",
+  "description": "Portafolio Web Juan Pablo Ramirez Lozano",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "Juan Pablo Ramirez Lozano",
+  "license": "GPL-2.0"
+}

@@ -1,26 +1,30 @@
-# **PORTAFOLIO WEB** 🌐
+# **PORTAFOLIO WEB | Juan Pablo Ramirez Lozano** 🌐
 
-👋 ¡Bienvenido al repositorio de mi portafolio web!
+👋 ¡Bienvenido al repositorio de mi portafolio web personal!
 
 Aquí encontrarás los archivos, así como el código de despliegue y control de versiones.
 
 ## 🌍 Visita Mi Sitio Web
 
-¡Echa un vistazo a mi [PORTAFOLIO WEB](https://duskstargithub.github.io/) para explorar mi trabajo y conocer más sobre mí! ✨
+¡Echa un vistazo a mi [PORTAFOLIO WEB](https://malocraco.github.io/) para explorar mi trabajo y conocer más sobre mí! ✨
 
 ## 🖥️ **Tecnologías** 🚀
 
-- **Lenguajes de Programación**: HTML, CSS, JavaScript, entre otros....
-- **Frameworks**: N/A
-- **Herramientas**: Vs Code, Terminal, GIT
-- **Bibliotecas**: jQuery, Bootstrap, Slick JS
+- **Lenguajes y Tecnologías**: HTML5, CSS3, JavaScript, TypeScript
+- **Frameworks y Estilos**: React, Tailwind CSS, NestJS
+- **Herramientas**: Git, VS Code, Node.js, FormSubmit API, IA Tools
 
 ## ⚡ **Cómo Clonar y Desplegar** 🌱
 
-Si deseas explorar mi sitio web en tu entorno local, sigue estos pasos:
+Si deseas explorar el sitio web en tu entorno local:
 
-1. Clona este repositorio: `https://github.com/DuskStarGITHUB/DuskStarGITHUB.github.io`
-2. Ejecuta un archivo HTML en un servidor local.
+1. Clona este repositorio: `https://github.com/Malocraco/Malocraco.github.io`
+2. Instala / Inicia el servidor local:
+   ```bash
+   npm start
+   # o bien: node server.js
+   ```
+3. Abre tu navegador en `http://localhost:3000`
 
 ## 🏆 **Funcionalidades Destacadas** 🔥
 

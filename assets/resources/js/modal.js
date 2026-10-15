@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const proyectoRadio = document.getElementById("proyecto-radio");
-  const proyectoNTS = document.getElementById("proyecto-nts");
-  const proyectoME = document.getElementById("proyecto-me");
-  const proyectoDJ = document.getElementById("proyecto-dj");
-  const radioModal = document.getElementById("radio-modal");
-  const ntsModal = document.getElementById("nts-modal");
-  const MeModal = document.getElementById("me-modal");
-  const djModal = document.getElementById("dj-modal");
   const modalClose = document.querySelectorAll(".modal-close");
   let isModalOpen = false;
   let currentOpenModal = null;
@@ -22,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const openModal = (modal) => {
+    if (!modal) return;
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
     isModalOpen = true;
@@ -44,16 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  proyectoRadio.addEventListener("click", () => openModal(radioModal));
-  proyectoNTS.addEventListener("click", () => openModal(ntsModal));
-  proyectoME.addEventListener("click", () => openModal(MeModal));
-  proyectoDJ.addEventListener("click", () => openModal(djModal));
+  // Asignar apertura a cada tarjeta por data-modal o por mapeo de id
+  const projectCards = document.querySelectorAll(".proyecto-card");
+  projectCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const modalId = card.getAttribute("data-modal");
+      if (modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) openModal(modal);
+      } else {
+        // Fallback por ID si no tiene data-modal
+        const id = card.id ? card.id.replace("proyecto-", "") + "-modal" : null;
+        if (id) {
+          const modal = document.getElementById(id);
+          if (modal) openModal(modal);
+        }
+      }
+    });
+  });
 
   modalClose.forEach((closeBtn) => {
     closeBtn.addEventListener("click", closeModal);
   });
 
-  [radioModal, ntsModal].forEach((modal) => {
+  // Cerrar al hacer clic fuera del contenido en cualquier modal
+  const allModals = document.querySelectorAll(".proyecto-modal");
+  allModals.forEach((modal) => {
     modal.addEventListener("click", function (e) {
       if (e.target === modal) {
         closeModal();
